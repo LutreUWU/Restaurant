@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/BG.css">
+  <link rel="stylesheet" href="CSS/headbar.css">
+  <link rel="stylesheet" href="CSS/foodContent.css">
+  <link rel="stylesheet" href="CSS/whoContent.css">
+
+</head>
+
+
+<body>
+ 
+<div class="Intro">  <!-- div Nuage  -->
+  <div class="cloudDiv">
+    <div class="StaticCloud">
+      <img class="cloud" style="bottom:300px; animation: wind 3s infinite linear;" src="RestaurantImage/Cloud/cloudmid.png">
+      <img class="cloud" style="animation: wind 4s infinite linear; right: -500px;"src="RestaurantImage/Cloud/cloudmid.png" >
+      <img class="cloud" style="animation: wind 4s infinite linear; transform: translateX(-10%);" src="RestaurantImage/Cloud/cloud1.png" style="--i:1;">
+      <img class="cloud" style="animation: wind 3s infinite linear; transform: translateX(10%);" src="RestaurantImage/Cloud/cloud2.png" style="--i:2;">
+      <img class="cloud" style="animation: wind 5s infinite linear; transform: translateX(0%);" src="RestaurantImage/Cloud/cloud3.png" style="--i:3;">
+      <img class="cloud" style="animation: wind 3s infinite linear; transform: translateX(20%);" src="RestaurantImage/Cloud/cloud4.png" style="--i:4;">
+      <img class="cloud" style="animation: wind 2s infinite linear; transform: translateX(-50%);" src="RestaurantImage/Cloud/cloud5.png" style="--i:5;">
+  </div>
+
+    <div class="MovingCloud">
+        <img class="cloud" src="RestaurantImage/Cloud/cloud1.png" style="--i:1;">
+        <img class="cloud" src="RestaurantImage/Cloud/cloud2.png" style="--i:2;">
+        <img class="cloud" src="RestaurantImage/Cloud/cloud3.png" style="--i:3;">
+        <img class="cloud" src="RestaurantImage/Cloud/cloud4.png" style="--i:2;">
+        <img class="cloud" src="RestaurantImage/Cloud/cloud5.png" style="--i:1;">
+
+        <img class="cloud" style="bottom:50px; --i:3;" src="RestaurantImage/Cloud/cloudmid.png">
+        <img class="cloud" src="RestaurantImage/Cloud/cloudmid.png" style="--i:5;">
+    </div>
+
+    
+    
+  </div>
+
+</div>
+  
+  <div style="position: relative; width: 100vw; height: 100%; overflow: hidden;"> <!-- div background + JS pour changer le background en fonction du lever/coucher du soleil + JS pour intéragir avec le menu et le restaurant -->  
+   <div class="background"></div>
+
+    <div class="Sunset">
+      
+      <div class="TitleDiv">
+        <img class="Title" src="RestaurantImage/imgSunset/TitleSunset.png">
+      </div>
+      
+      
+      <div class="MenuDiv">
+          <img class="Menu" src="RestaurantImage/imgSunset/MenuSunset.png">
+      </div>
+       
+       
+
+    </div>
+
+    
+
+    <div class="Night">
+      
+      <div class="TitleDiv">
+        <img class="Title" src="RestaurantImage/imgNight/TitleNight.png">
+      </div>
+      
+      
+      <div class="MenuDiv">
+          <img class="Menu" src="RestaurantImage/imgNight/MenuNight.png">
+      </div>
+       
+       
+
+    </div>
+  
+    <div class="Day">
+      
+      
+      <div class="TitleDiv">
+        <img class="Title" src="RestaurantImage/imgDay/TitleDay.png">
+      </div>
+      
+      
+      <div class="MenuDiv">
+          <img class="Menu" src="RestaurantImage/imgDay/MenuDay.png">
+      </div>
+       
+       
+
+    </div>
+   
+   
+   
+    <script src="JS/MenuTitle.js"></script>
+    <script src="JS/weather.js"></script>
+ 
+</div>
+
+
+  
+ <div class="headbar">  <!-- div headbar --> 
+  
+  <div class="left-headbar">
+    <img class="logo" src="headbarImage/logo.png">
+    <p class="name">Le Bun Sacré</p>
+  </div>
+
+  <div class="mid-headbar">
+      <div class="Button">Nos plats</div>
+      <div class="Button">Qui sommes-nous</div>
+      <div class="Button">Réservez</div>
+      <div class="Button">Contact</div>
+      
+  </div>
+  
+  <div class="right-headbar">
+    <div>
+      <p><u>Le Bun sacré</u></p>
+      <p>ZI du Forum, 42110 Feurs</p>
+      <p>06 77 27 13 60</p>
+    </div>
+  </div>
+
+
+
+  <div class="headbar-responsive">
+   
+          <div><img class="hamburger" src="headbarImage/hamburger-menu.svg"> </div>
+    
+          <div class="menuHidden">
+            <div class="back">&#8617</div>
+                    <div class="Button" >Nos plats</div>
+                    <div class="Button">Qui sommes-nous</div>
+                    <div class="Button">Contact</div>
+                    <div class="Button">Réservez</div>
+
+                    <div class="contactHidden">
+                      <p><u>Le Bun sacré</u></p>
+                      <p>ZI du Forum, 42110 Feurs</p>
+                      <p>06 77 27 13 60</p>
+                    </div>
+          </div>
+   <script>
+    // Script pour le responsive sur teléphone 
+    hamburger = document.querySelector(".hamburger")
+    menuHidden = document.querySelector(".menuHidden")
+    back = document.querySelector(".back")
+
+    hamburger.addEventListener("click", function() {
+      hamburger.style.right = "-100%"
+      menuHidden.style.right = "0%"
+    })
+
+    back.addEventListener("click", function() {
+      hamburger.style.right = "0%"
+      menuHidden.style.right = "-100%"
+    })
+
+   </script>
+  </div> 
+  </div>
+
+
+  <div class="foodContent">
+    <div class="gridFood " >
+      
+      
+      <div class="nemsDiv hidden">
+       
+        <div class="foodImage">
+          <img class="food" src="MenuImage/Nems.png">
+        </div>
+        
+        <div class="foodText">
+          <div class="foodTitle">
+            <span style="margin-left: 2%;">Nems Maison</span>
+          </div>
+
+          <div class="foodDescription">
+            Découvrez nos délicieux nems maison, une véritable explosion de saveurs qui vous transportera au cœur de l'Asie dès la première bouchée.
+          </div>
+
+          <div class="priceDiv">
+            <div class="price">
+              <u>3 portions</u>
+              <p>6 $</p>
+            </div>
+
+            <div class="price">
+              <u>5 portions</u>
+              <p>9 $</p>
+            </div>
+            
+          </div>
+        </div>
+      
+      </div>
+      
+      
+      <div class="noodleDiv  hidden">
+         
+          <div class="foodImage">
+            <img class="food" src="MenuImage/noodle.png" >
+          </div>
+          
+          <div class="foodText">
+            <div class="foodTitle">
+              <span style="margin-left: 2%;">Spécialité du chef N°1</span>
+            </div>
+
+            <div class="foodDescription">
+              Explorez les délices des nouilles spécialité du chef, un trésor gastronomique que seul notre talentueux chef peut vous offrir. Savourez une symphonie de saveurs, où les épices et les arômes se marient dans une danse délicieuse,
+            </div>
+
+            <div class="priceDiv">
+              <div class="price">
+                <u>Petit bol</u>
+                <p>12 $</p>
+              </div>
+
+              <div class="price">
+                <u>Grand bol</u>
+                <p>15 $</p>
+              </div>
+            </div>
+          
+          
+          </div>
+
+      </div>
+
+      <div class="canardDiv  hidden">
+        
+        <div class="foodImage">
+          <img class="food" src="MenuImage/Canard.png">
+        </div>
+
+        <div class="foodText">
+          
+          <div class="foodTitle">
+            <span style="margin-left: 2%;">Canard Laqué</span>
+          </div>
+
+          <div class="foodDescription">
+            Préparé avec un savoir-faire artisanal et une attention méticuleuse, notre canard laqué est tendre, juteux et imprégné d'une glaçure caramélisée d'une couleur dorée alléchante.
+          </div>
+
+          <div class="priceDiv">
+            <div class="price">
+              <u>Petite assiette</u>
+              <p>12 $</p>
+            </div>
+
+            <div class="price">
+              <u>Grande assiette</u>
+              <p>15 $</p>
+            </div>
+          </div>
+
+        </div>
+       
+      </div>
+      
+      
+      <div class="ramenDiv  hidden">
+        <div class="foodImage">
+          <img class="food" src="MenuImage/Ramen.png">
+        </div>
+        <div class="foodText">
+
+          <div class="foodText">
+          
+            <div class="foodTitle">
+              <span style="margin-left: 2%;">Spécialité du chef N°2</span>
+            </div>
+  
+            <div class="foodDescription">
+            
+Découvrez l'ultime délice de nos ramen spécialité du chef, une expérience culinaire inégalée qui vous plongera dans un monde de saveurs raffinées.
+            </div>
+  
+            <div class="priceDiv">
+              <div class="price">
+                <u>Petit bol </u>
+                <p>12 $</p>
+              </div>
+  
+              <div class="price">
+                <u>Grand bol</u>
+                <p>15 $</p>
+              </div>
+            </div>
+  
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script src="JS/headbar.js"></script>
+  </div>
+
+ <div class="whoContent">
+  
+<div class="whoDiv">
+    <div class="chefDiv hidden">
+          <div class="whoImageDiv">
+            <img src="whoImage/chef.jpg" class="whoImage">
+            <img src="whoImage/chef2.jpg" class="whoImage">
+          </div>
+
+            <div class="whoTextDiv">
+                  <div>
+                    <h1 class="whoTitle">Samuel Lee Sum </h1>
+                  </div>
+
+                  <div>
+                    <p>Permettez-moi de vous présenter le chef cuisinier asiatique renommé, Samuel Lee Suml. Originaire d'une famille de cuisiniers passionnés, Samuel a été baigné dès son plus jeune âge dans les délices de la cuisine asiatique. </p>
+                    <p>Fort de cette héritage culinaire, il a entrepris un parcours exceptionnel dans les arts culinaires, perfectionnant ses compétences auprès de grands chefs dans différents pays d'Asie.</p>
+                    <p>Samuel Lee Suml est un véritable artiste en cuisine, mariant habilement les traditions culinaires anciennes avec des techniques modernes et innovantes pour créer des plats qui racontent une histoire de saveurs exquises. </p>
+                
+                  </div>
+          </div>
+    </div>
+    
+    <div class="restauDiv  hidden">
+        <div class="whoTextDiv" style="text-align: end; ">
+              <div>
+                <h1 class="whoTitle" style=" background: linear-gradient(90deg,rgba(89, 75, 75, 0) 0%, rgba(189, 31, 31, 0.637) 100% );">Notre restaurant </h1>
+              </div>
+
+              <div>
+                <p>Ouvert en 2010, notre objectif est de vous offrir une expérience culinaire inégalée, un voyage gustatif qui éveille vos sens et vous transporte vers de lointaines contrées culinaires. Inspiré par les traditions ancestrales de la cuisine asiatique.</p>
+                <p>Notre restaurant allie habilement les techniques culinaires classiques avec une touche de modernité, créant ainsi des plats qui racontent une histoire de saveurs exquises..</p>
+                <p> Notre chef talentueux, Samuel Lee Suml, est le cœur et l'âme de notre établissement, apportant son savoir-faire et sa passion pour l'art culinaire à chaque plat. </p>
+            
+              </div>
+        </div>      
+             
+        <div class="whoImageDiv">
+              <img src="RestaurantImage/imgDay/Restau Day.jpg" class="whoImage">
+        </div>
+      
+    </div> 
+</div>
+    
+    
+ </div> 
+
+<script src="JS/animation.js"></script>
+</body>
+</html>
+

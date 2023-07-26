@@ -1,0 +1,189 @@
+.foodContent{
+ 
+  background: linear-gradient(transparent 0, #ceb280 60px, goldenrod );
+  width: 100vw;
+  height: 105vh;
+  z-index: 98;
+  position: absolute;
+  top: 95%;
+ 
+}
+
+.gridFood{
+  width: 90%;
+  height: 80%;
+  border: solid 1px black;
+  background-image: url("../MenuImage/BG.jpg");
+  padding: 30px 15px;
+
+
+  border-radius: 15px;
+  position: relative;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%,-55%);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  justify-content: end;
+  align-items: center;
+  
+
+  box-shadow: 5px 0 30px 15px rgba(202, 12, 12, 0.753);
+
+ 
+}
+
+.nemsDiv,
+.noodleDiv,
+.canardDiv,
+.ramenDiv{
+  
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.473);
+  padding: 15px;
+  border-radius: 10%;
+  border: 5px solid goldenrod
+}
+
+.foodImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food{
+  width: 350px;
+  
+}
+
+.foodText{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.foodTitle{
+  flex-basis: auto;
+  font-size: 2em;
+  font-weight: bold;
+  background: rgb(189,31,31);
+  background: linear-gradient(90deg, rgba(189,31,31,1) 0%, rgba(89, 75, 75, 0) 100%);
+  transform: skew(-20deg);
+ 
+}
+
+.foodDescription{
+  flex-basis: 50%;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  
+}
+
+.priceDiv{
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.price{
+  font-size: 1.5em;
+  color: rgb(201, 81, 81);
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  border: 5px solid rgb(185, 145, 14);
+  border-radius: 15px;
+}
+
+@media (max-width:1385px) {
+  .gridFood{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nemsDiv,
+  .noodleDiv,
+  .canardDiv,
+  .ramenDiv{
+    flex-basis:20% ;
+    margin: 1%;
+  }
+
+  .food{
+   
+    width: 150px;
+    
+  }
+
+  .foodTitle{
+    font-size: 1.6em;
+  }
+
+  .foodDescription{
+    font-size: 1.1em;
+  }
+
+  .price{
+    
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+
+}
+
+@media (max-width:985px) {
+
+  .food{
+    width: 100px;
+  }
+  .foodTitle{
+    font-size: 1.5em;
+  }
+
+  .foodDescription{
+    font-size: 1em;
+  }
+
+  .price{
+    font-size: 1.1em;
+  }
+
+}
+
+@media (max-width:544px) {
+.gridFood{
+  height: 80%;
+}
+
+  .food{
+    width: 75px;
+  }
+
+  .foodTitle{
+    font-size: 1.2em;
+  }
+
+  .foodDescription{
+    font-size: 0.9em;
+  }
+
+  .price{
+    font-size: 1em;
+  }
+
+}

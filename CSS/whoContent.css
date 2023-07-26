@@ -1,0 +1,169 @@
+.whoContent{
+ 
+  background: linear-gradient(transparent 0, #a84e33 60px, rgba(218, 165, 32, 0.459) );
+  width: 100vw;
+  height: 105vh;
+  z-index: 98;
+  position: absolute;
+  top: 195%;
+ 
+}
+
+.whoDiv{
+  width: 90%;
+  height: 80%;
+  
+  box-shadow: 5px 0 30px 15px rgba(202, 151, 12, 0.753);
+  border-radius: 15px;
+  background-image: url("../MenuImage/BG.jpg");
+
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%,-55%);
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+}
+
+.chefDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+ 
+  background-color: rgba(0, 0, 0, 0.473);
+  border-radius: 5%;
+}
+
+.restauDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+  margin-top: 1%;
+  background-color: rgba(0, 0, 0, 0.473);
+  border-radius: 5%;
+}
+.whoImageDiv{
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  height: 80%;
+  width: auto;
+}
+
+.whoImage{
+  width: auto;
+  height: 100%;
+  border-radius: 30px;
+  border: 5px solid goldenrod;
+}
+
+.whoTextDiv{
+  
+  flex-basis: 50%;
+  font-family: Roboto;
+  
+
+}
+
+.whoTitle{
+  font-size: 2em;
+  background: rgba(189, 31, 31, 0.616);
+  background: linear-gradient(90deg, rgba(189, 31, 31, 0.637) 0%, rgba(89, 75, 75, 0) 100%);
+  transform: skew(-20deg);
+  
+}
+
+.whoTextDiv p {
+  font-size: 1.3em;
+  color: whitesmoke;
+}
+
+@media (max-width:1800px) {
+
+  .whoImageDiv{
+    height: 70%;
+  }
+
+  .whoTitle{
+    font-size: 1.7em;
+  }
+
+  .whoTextDiv p{
+    font-size: 1.3em;
+  }
+
+}
+
+@media (max-width:1385px) {
+  .chefDiv,
+  .restauDiv{
+    display: block;
+    height: 48%;
+    margin: 1% 1% 0% 1%;
+  }
+
+  .whoImageDiv{
+    height: 40%;
+  }
+
+  .whoTitle{
+    font-size: 1.5em;
+  }
+
+  .whoTextDiv p{
+    font-size: 1.1em;
+  }
+
+}
+@media (max-width:685px) {
+  .chefDiv,
+  .restauDiv{
+    display: block;
+    height: 48%;
+    margin: 1% 1% 0% 1%;
+  }
+
+  .whoImageDiv{
+    margin-top: 5%;
+    height: 30%;
+  }
+
+  .whoTitle{
+    
+    font-size: 1.3em;
+    text-align: center;
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .whoTextDiv p{
+    font-size: 0.9em;
+  }
+
+}
+
+@media (max-width:400px) {
+  
+
+  .whoImageDiv{
+    height: 25%;
+  }
+
+  .whoTitle{
+    
+    font-size: 1.2em;
+    text-align: center;
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .whoTextDiv p{
+    font-size: 0.8em;
+  }
+
+}

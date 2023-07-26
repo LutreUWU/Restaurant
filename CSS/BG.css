@@ -1,0 +1,289 @@
+
+
+.Intro{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  animation: out 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.cloudDiv{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  
+  
+}
+
+.cloud{
+  position: absolute;
+  bottom: 0px;
+  
+  max-width: 100%;
+  animation: animate calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes animate {
+  0%, 100%{
+    transform: translateX(0%);
+  }
+
+  25%{
+    transform: translateX(-100%);
+  }
+
+  75%{
+    transform: translateX(100%);
+  }
+}
+
+@keyframes wind{
+  0%{
+    margin: 0;
+  }
+  25%{
+    margin-right: 30px;
+  }
+
+  50%{
+    margin-left: 30px;
+  }
+
+  100%{
+    margin: 0;
+  }
+}
+
+@keyframes out {
+  from{
+    top: 0px;
+  
+  }
+
+  to {
+    top: 100%;
+    display: none;
+  }
+}
+
+.background{
+  position: absolute;
+
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:  cover ;
+  filter: blur(10px);
+  z-index: -11;
+}
+
+
+.Sunset,
+.Day,
+.Night{
+  position: absolute;
+ 
+  width: 1920px;
+  height: 1080px;
+  
+  top:50%;
+  left: 50%; 
+   
+  transform: translate(-50%,-50%);
+
+  font-family: Roboto;
+  transition: left 0.5s;
+  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.589);
+  border: solid 3px #b58d67;
+}
+
+
+.Sunset{
+  background-image: url("../RestaurantImage/imgSunset/Restau\ Sunset.jpg");
+  background-repeat: no-repeat;
+  background-size:  cover ;
+  
+  
+
+  z-index: 0;
+  opacity: 0;
+  
+}
+
+.Day{
+  background-image: url("../RestaurantImage/imgDay/Restau\ Day.jpg");
+  background-repeat: no-repeat;
+  background-size:  cover ;
+
+  z-index: 0;
+  opacity: 0;
+ 
+}
+
+.Night{
+  background-image: url("../RestaurantImage/imgNight/Restau\ Night.jpg");
+  background-repeat: no-repeat;
+  background-size:  cover ;
+
+  z-index: 0;
+  opacity: 0;
+  
+}
+
+
+
+.MenuDiv{
+  position: absolute;
+  bottom: 248px;
+  left: 610px;
+  transition: all 0.5s ease-in-out;
+
+  animation: scale 2s infinite alternate-reverse
+}
+.MenuDiv::before{
+  content:"Menu";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 10px 5px;
+  color: rgb(216, 202, 202);
+  background-color: rgba(59, 61, 61, 0.877);
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  
+
+}
+
+.MenuDiv:hover::before{
+  content:"Menu";
+  font-size: 1.2em;
+  padding: 10px 10px;
+  opacity: 1;
+}
+
+
+.Menu{
+  width: 90px;
+  z-index: 1;
+  transition: all 0.5s ;
+  animation: bright 1.5s infinite alternate-reverse
+}
+
+
+
+
+
+
+
+.TitleDiv{
+  position: absolute;
+  top: 172px;
+  right: 873px;
+  transition: all 0.5s ease-in-out;
+  animation: scale 2s infinite alternate-reverse
+}
+.TitleDiv::before{
+  content:"Le Restaurant";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 10px 5px;
+  color: rgb(216, 202, 202);
+  background-color: rgba(59, 61, 61, 0.877);
+  border-radius: 10px;
+  
+
+  letter-spacing: 2px;
+  font-weight: bold;
+  
+  
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  
+  
+
+}
+
+
+
+.TitleDiv:hover::before{
+  content:"Le Restaurant";
+  font-size: 1.2em;
+  padding: 10px 10px;
+  opacity: 1;
+}
+
+
+
+.Title{
+  width: 357px;
+  z-index: 1;
+  animation: bright 2.5s infinite alternate-reverse
+
+}
+
+
+
+
+@keyframes scale {
+  from{
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+@keyframes bright {
+  from{
+    filter: brightness(1.5);
+  }
+
+  to {
+    filter: brightness(1);
+  }
+}
+
+
+@media (max-width:700px){
+
+
+  .Sunset,
+  .Day,
+  .Night{
+    left: 65%;
+  }
+}
+
+@media (max-width:550px){
+
+
+  .Sunset,
+  .Day,
+  .Night{
+    left: 80%;
+  }
+}
+
+@media (max-width:420px){
+
+
+  .Sunset,
+  .Day,
+  .Night{
+    left: 110%;
+  }
+}
